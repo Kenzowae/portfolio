@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"  crossorigin="anonymous"  />
+    <link rel="stylesheet" href="style.css" />
+    <title>Portfolio</title>
+    <style>
+    @import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+    :root {
+        --cor-principal: #6e859f;
+        --cor-secundaria: #284260;
+        --cor-destaque: #c92bfc;
+    }
+    body {
+        font-family: "Chakra Petch", sans-serif;
+    }
+    h1,
+    h2,
+    h5 {
+        color: var(--cor-secundaria);
+       font-weight: 700;
+    }   
+    footer a {
+        color: var(--cor-principal);
+    }
+
+    footer a:hover {
+         color: var(--cor-destaque);
+    }
+</style>
+<script>
+        function changeImage() {
+            let img = document.getElementById("myImage");
+            if (img.src.match("img1")) {
+                img.src = "kenzo.jpg";
+            } else {
+                img.src = "garro.jpeg";
+            }
+        }
+        function showDateTime() {
+            let now = new Date();
+            document.getElementById("datetime").innerHTML = now.toString();
+        }
+        function changeTextAndColor() {
+            document.getElementById("text").innerHTML = "Salve o Corinthians!";
+            document.getElementById("text").style.color = "blue";
+        }
+    </script>
+</head>
+<body>
+    <header class="container text-center">
+        <img  id="myImage"   
+        src="kenzo.jpg"
+        alt="minha foto"
+        class="rounded-circle"
+        width="200"
+        height="200"
+        srcset=""/>
+        <button onclick="changeImage()">Trocar Imagem</button>
+        <p class="lead">Eu sou Rodrigo Kenzo</p>
+        <h1>Eu aprendo Programação</h1>
+        <p>
+          Sou Aluno do Colégio da Polícia Mílitar Do Paraná, estou na 3 série do ensino médio, e faço programas utilizando html e css
+        </p>
+        <p id="text">VAI CORINTHIANS</p>
+        <button onclick="changeTextAndColor()">Alterar Texto e Cor</button>
+        <button onclick="showDateTime()">Mostrar Data e Hora</button>
+        <p id="datetime"></p>    
+        <p>Minhas habilidades</p>
+        <div> 
+            <p class="badge bg-secondary">HTML</p>
+            <p class="badge bg-secondary">CSS</p>
+            <p class="badge bg-secondary">JavaScript</p>
+            <p class="badge bg-secondary">Scratch</p>
+        </div>
+    </header>
+    <main class="container">
+        <h2>Meus projetos</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+              <img src="github.png" class="card-img-top" alt="Print do guithub" />
+              <div class="card-body">
+                <h5 class="card-title">Meu Github</h5>
+                <p class="card-text">
+                  Este é o meu github no qual eu utilizo para postar meus projetos de html e css
+                </p>
+                <a href="https://github.com/Kenzowae" class="btn btn-primary">Veja meu perfil</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="container py-5">
+        <h2>Entre em contato</h2>
+        <div>
+          <a href="https://github.com/Kenzowae">GitHub</a>
+        </div>
+        <p class="my-5 text-center">© Copyright 2024. Produzido por Rodrigo Kenzo Miashiro</p>
+      </footer>      
+    <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+  ></script>
+</body>
+</html>
